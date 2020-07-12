@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>模板机制</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div id="app">
+        <h3>插值-文本</h3>
+        <p>【数据同步变化】</p>
+        <p>{{ text }}</p>
+        <p>【数据只渲染一次v-once】</p>
+        <p v-once>{{ text }}</p>
+        <input v-model="text" style="width: 50%;">
+
+        <h3>插值-html</h3>
+        <p>【直接使用mustance语法】</p>
+        <p>{{ html }}</p>
+        <p>【使用v-html】</p>
+        <p v-html="html"></p>
+
+        <h3>插值-属性</h3>
+        <p>【使用v-bind指令进行属性绑定】</p>
+        <input type="text" v-bind:placeholder="placeholder">
+
+        <h3>使用js单句表达式来补充数据</h3>
+        <p>【在mustance语法中使用】</p>
+        <p>1 + 1 = {{ 1 + 1 }}</p>
+        <p>【在属性绑定中使用】</p>
+        <p v-bind:title="'it is a ' + title">鼠标悬浮显示title</p>
+
+        <h3>指令的使用</h3>
+        <label>1 + 1 = </label>
+        <input v-model="sumResult">
+        <label v-if="1+1==sumResult">你输入了正确答案！</label>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="../js/template.js"></script>
+</html>
