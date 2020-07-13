@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>计算属性和侦听器</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div id="app">
+        <h3>计算属性computed</h3>
+        <input v-model="message">
+        <h4>使用复杂的表达式模板</h4>
+        <p>{{ message.split('').reverse().join('') }}</p>
+        <h4>使用计算属性的方式</h4>
+        <p>{{ reverseMessage }}</p>
+
+        <h3>侦听属性</h3>
+        <label>firstName:</label><input v-model="firstName">
+        <label>lastName:</label><input v-model="lastName">
+        <p>fullName: {{ fullName }}</p>
+
+        <h3>属性侦听适合在异步中使用：</h3>
+        <p>你有什么犹豫不决的问题吗？说出来让我告诉你答案：</p>
+        <input :placeholder="question_placeholder" v-model="question">
+        <p> {{ answer }} </p>
+        <div><img :src="answer_image"></div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<script src="../js/计算属性和侦听器.js"></script>
+</html>
