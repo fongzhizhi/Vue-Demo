@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Css 和 Style 的绑定</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .big {
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--class：对象绑定法-->
+        <p>忙着<span :class="c1">生</span>，或忙着<span class="blue" :class="c2">死</span>。</p>
+        <!--class：数组绑定法-->
+        <p>Busy to <span :class="[big_, blue_]">live</span> or busy to <span :class="[big_, red_]">die</span>.</p>
+        <!--class: 在数组中使用对象-->
+        <p>Busy to <span :class="[c1]">live</span> or busy to <span :class="[big_, blue_]">die</span>.</p>
+
+        <br>
+        <!--style的绑定-->
+        <p>有些人<span :style="sty1">活</span>着，却已经<span :style="sty2">死</span>了</p>
+        <p>有些人<span :style="[sty2, italic]">死</span>了，却永远<span :style="[sty1, italic]">活</span>着</p>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../js/css和style的绑定.js"></script>
+</html>

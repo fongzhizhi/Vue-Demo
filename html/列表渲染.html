@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>列表渲染</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div id="app">
+        <p>用户信息</p>
+        <ul>
+            <li v-for="(item, index) in userInfo">{{ index + 1 }} . {{ item.name }} : {{ item.skill }}</li>
+        </ul>
+
+        <p>TODO</p>
+        <ol>
+            <li v-for="(item, key) of planInfo">{{ key }} : {{ item }}</li>
+        </ol>
+
+        <p>原始数据</p>
+        <ul>
+            <li v-for="n in nums">{{ n }}</li>
+        </ul>
+        <p>过滤后的数据</p>
+        <ul>
+            <li v-for="n in evenNums">{{ n }}</li>
+        </ul>
+
+        <p>使用函数</p>
+        <ul>
+            <template v-for="nums in dataNums">
+                <li v-for="n in even(nums)">{{ n }}</li>
+            </template>
+        </ul>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../js/列表渲染.js"></script>
+</html>

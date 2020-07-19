@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>事件监听</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div id="app">
+        <button @click="++count">Add</button>
+        <p>the count of click this button is : {{ count }}</p>
+
+        <button @click="showMessage('Hi')">say Hi!</button>
+        <button @click="showMessage('Hello')">say Hello!</button>
+
+        <input @keyup.shift="showMessage(message)" v-model="message">
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../js/事件监听.js"></script>
+</html>

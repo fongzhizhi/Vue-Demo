@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>条件渲染</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div id="app">
+        <p v-if="awesome">The VUE is awesome!</p>
+        <p v-else>oh no, 😢</p>
+
+        <template v-if="well">
+            <h3>Life's a struggle</h3>
+            <p>please keep going</p>
+        </template>
+
+        <div v-show="well">
+            That's well.
+        </div>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../js/条件渲染.js"></script>
+</html>
